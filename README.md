@@ -7,8 +7,8 @@
     private List<ItemBean> mList;
     private LayoutInflater mInflater;
 
-    //在构造方法中将数据传进来
-    //mInflater 从一个Context中，获得一个布局填充器，可以使用这个填充器来把xml布局文件转为View对象了。
+    //Context context 从一个Context中，获得一个布局填充器，可以使用这个填充器来把xml布局文件转为View对象
+    //List<ItemBean> list  在构造方法中将数据传进来
     public MyAdapter(Context context,List<ItemBean> list) {
         mList = list;
         mInflater = LayoutInflater.from(context);
