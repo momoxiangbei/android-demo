@@ -2,7 +2,7 @@
 
 ## BaseAdapter
 
-  public class MyAdapter extends BaseAdapter {
+    public class MyAdapter extends BaseAdapter {
 
     private List<ItemBean> mList;
     private LayoutInflater mInflater;
@@ -65,4 +65,4 @@
         public TextView title;
         public TextView content;
     }
-  }
+    }
