@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">好老公？</string>
+    <string name="action_settings">Settings</string>
+    <string name="answer_false">我不会</string>
+    <string name="answer_true">我会</string>
+    <string name="next">next</string>
+    
+    <string name="one">你会永远都无条件包容你老婆吗 </string>
+    <string name="two"> 老婆出门前 磨磨唧唧的 要化妆很久 你会耐心等待吗</string>
+    <string name="three"> 老婆心情不好 说你几句 你会生气吗 </string>
+    <string name="four">  老婆喜欢一个包包 但是很贵 你会给买吗 </string>
+    <string name="five">  老婆把你的电脑弄坏了 里面有重要的文件 你会骂老婆吗 </string>
+    <string name="six"> 有个小学妹非常喜欢你 长的特漂亮 对你特好 你会喜欢她吗 </string>
+    <string name="seven"> 老婆来事肚子疼  但是想吃麻辣烫 你会让老婆吃吗 </string>
+    <string name="eight">  半夜老婆饿了 要吃零食 你回去给买吗 </string>
+
+
+</resources>
