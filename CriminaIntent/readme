@@ -1,0 +1,54 @@
+（ 一 ）获取数据数据：
+1 获取mCrimes
+        private ArrayList<Crime> mCrimes;
+        mCrimes = CrimeLab.get(this).getCrimes();
+2 根据id获取crime
+
+
+
+（ 二 ）页面切换 值的传递 (传ID)
+1 由Fragment(A页面) 打开Activity(MM页面)托管的 Fragment(B页面)
+
+
+
+
+
+
+    A 页面：
+        Crime c = ((CrimeAdapter) getListAdapter()).getItem(position);
+        Intent i = new Intent(getActivity(),CrimePagerActivity.class);
+        i.putExtra(CrimeFragment.EXTRA_CRIME_ID,c.getId());
+        startActivity(i);
+
+    Activity页面：
+        CrimeFragment.newInstance(crime.getId());
+
+        UUID crimeId = (UUID)getIntent().getSerializableExtra(CrimeFragment.EXTRA_CRIME_ID);
+        for (int i= 0; i<mCrimes.size() ;i++){
+        if (mCrimes.get(i).getId().equals(crimeId)){
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
+
+    B 页面:（onCreate）
+        mCrime = new Crime();
+        UUID crimeId = (UUID) getArguments().getSerializable(EXTRA_CRIME_ID);
+        mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
+
+
+            //实例化fragment 创建bundle对象
+            public static CrimeFragment newInstance (UUID crimeId){
+                Bundle args = new Bundle();
+                args.putSerializable(EXTRA_CRIME_ID,crimeId);
+                CrimeFragment fragment = new CrimeFragment();
+                fragment.setArguments(args);
+                return fragment;
+            }
+
+
+
+
+
+
+

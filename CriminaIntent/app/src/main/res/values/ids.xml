@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //创建资源ID
+    <item name="viewPager" type="id" />
+
+</resources>
