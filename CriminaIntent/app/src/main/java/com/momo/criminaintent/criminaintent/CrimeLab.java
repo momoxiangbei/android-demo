@@ -1,8 +1,10 @@
 package com.momo.criminaintent.criminaintent;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -21,6 +23,10 @@ import java.util.UUID;
 public class CrimeLab  {
 
     private ArrayList<Crime> mCrimes;
+
+    private static final String TAG = "CrimeLab";
+    private static final String FILENAME = "crimes.json";
+    private CriminalIntentJSONSerializer mSerializer;
     private static CrimeLab sCrimeLab;
     private Context mAppContext;
 
@@ -33,7 +39,14 @@ public class CrimeLab  {
             c.setSolved(i%2 ==0);
             mCrimes.add(c);
         }
+//        try {
+//            mCrimes = mSerializer.loadCrimes();
+//        } catch (IOException e) {
+//            mCrimes = new ArrayList<Crime>();
+//            Log.e(TAG,"Error load crimes :",e);
+//        }
     }
+
 
     public static CrimeLab get(Context c){
         if (sCrimeLab == null){
@@ -41,6 +54,18 @@ public class CrimeLab  {
         }
         return sCrimeLab;
     }
+
+//    public boolean saveCrimes(){
+//        try {
+//            mSerializer.saveCrimes(mCrimes);
+//            Log.d(TAG,"crimes saved to file");
+//            return true;
+//        }catch (Exception e){
+//            Log.e(TAG,"Error saving crimes :",e);
+//            return false;
+//        }
+//
+//    }
 
     public ArrayList<Crime> getCrimes(){
         return mCrimes;
@@ -55,5 +80,8 @@ public class CrimeLab  {
         return null;
     }
 
+    public void addCrime(Crime c){
+        mCrimes.add(c);
+    }
 
 }

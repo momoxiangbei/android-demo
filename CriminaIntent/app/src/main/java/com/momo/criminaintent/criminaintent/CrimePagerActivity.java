@@ -1,13 +1,13 @@
 package com.momo.criminaintent.criminaintent;
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.transition.CircularPropagation;
-import android.view.ViewParent;
+
 
 import java.util.ArrayList;
 import java.util.UUID;
